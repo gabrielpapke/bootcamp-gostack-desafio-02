@@ -31,7 +31,7 @@ Será uma aplicação para armazenar repositórios de um portfólio, que irá pe
 
 - [x] **`GET /repositories`**: Rota que lista todos os repositórios;
 
-- [ ] **`PUT /repositories/:id`**: A rota deve alterar apenas o `title`, a `url` e as `techs` do repositório que possua o `id` igual ao `id` presente nos parâmetros da rota;
+- [x] **`PUT /repositories/:id`**: A rota deve alterar apenas o `title`, a `url` e as `techs` do repositório que possua o `id` igual ao `id` presente nos parâmetros da rota;
 
 - [ ] **`DELETE /repositories/:id`**: A rota deve deletar o repositório com o `id` presente nos parâmetros da rota;
 
