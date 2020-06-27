@@ -7,22 +7,21 @@
 <blockquote align="center">“Não espere para plantar, apenas tenha paciência para colher”!</blockquote>
 
 
-## 👉 Como executar
+## :rocket: Sobre o desafio
 
+Nesse desafio, foi necessário criar uma aplicação apenas para treinar o que aprendi até agora no Node.js.
+
+É uma aplicação rodando em memória para armazenar repositórios de um portfólio, que irá permitir a criação, listagem, atualização e remoção dos repositórios, e além disso permitir que os repositórios possam receber "likes".
+
+### 👉 Como executar
 
 1. Abra o terminal e execute o comando `yarn` no diretório do desafio, para que instale as dependências.
 
-2. Para rodar a aplicação execute `yarn dev` e faça os testes com o Postman/Insomnia com a URL: http://localhost:3333
+2. Para rodar a aplicação execute `yarn dev` e faça os testes com o Postman/Insomnia com a URL: http://localhost:3333 (veja rotas da aplicação)
 
 3. Caso queira rodar os testes execute `yarn test`
 
 Enjoy it! 😁
-
-## :rocket: Sobre o desafio
-
-Nesse desafio, é necessário criar uma aplicação apenas para treinar o que aprendi até agora no Node.js.
-
-Será uma aplicação para armazenar repositórios de um portfólio, que irá permitir a criação, listagem, atualização e remoção dos repositórios, e além disso permitir que os repositórios possam receber "likes".
 
 
 ### Rotas da aplicação
@@ -37,6 +36,8 @@ Será uma aplicação para armazenar repositórios de um portfólio, que irá pe
 
 - [x] **`POST /repositories/:id/like`**: A rota deve aumentar o número de likes do repositório específico escolhido através do `id` presente nos parâmetros da rota, a cada chamada dessa rota, o número de likes deve ser aumentado em 1;
 
+### Bônus do desafio
+- Foi utilizado middlewares para validar o ID e se foi encontrado o repositório no array de repositórios, passando para o próximo middleware o índice do repositório encontrado.
 
 ## :memo: Licença
 
