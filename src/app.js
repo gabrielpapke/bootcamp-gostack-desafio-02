@@ -18,7 +18,6 @@ function validateRepositoryId (request, response, next) {
   }
 
   next()
-
 }
 
 function validateRepositoryFinded (request, response, next) {
@@ -32,7 +31,6 @@ function validateRepositoryFinded (request, response, next) {
   response.locals.repositoryIndex = repositoryIndex;
 
   next()
-
 }
 
 app.use('/repositories/:id', validateRepositoryId, validateRepositoryFinded)
@@ -80,7 +78,18 @@ app.delete("/repositories/:id", (request, response) => {
 });
 
 app.post("/repositories/:id/like", (request, response) => {
-  // TODO
+  const { repositoryIndex } = response.locals;
+
+  const likesNumber = repositories[repositoryIndex].likes
+
+  const updatedRepository = {
+    ...repositories[repositoryIndex],
+    likes: likesNumber + 1
+  }
+
+  repositories[repositoryIndex] = updatedRepository;
+
+  return response.json(updatedRepository)
 });
 
 module.exports = app;
